@@ -10,4 +10,7 @@ leiviskaLuodeiksi = leiviskaNauloiksi * 32
 leiviskaGramma = leiviskaLuodeiksi * 13.3
 naulaGramma = naulaLuodeiksi * 13.3
 grammat = luotiGramma + naulaGramma + leiviskaGramma
-print(grammat)
+kilogrammat = grammat / 1000
+print("Massa nykymittojen mukaan:")
+print(f"{kilogrammat:10.0f} kilogrammaa")
+#En tajunnut miten tähän saa laskettua grammat kilogrammojen laskemisen jälkeen.
