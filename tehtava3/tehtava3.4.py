@@ -1,6 +1,6 @@
 vuosi = int(input("Kerro vuosiluku: "))
-jako = vuosi / 4
-if jako==(int(jako)):
+
+if vuosi%4==0:
     print("Vuosi on karkausvuosi.")
 
 else:
