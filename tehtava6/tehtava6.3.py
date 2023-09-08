@@ -1,9 +1,9 @@
-def muunnos(maara):
-    gs = maara * 3.785
+def muunnos(bensa):
+    gs = bensa * 3.785
     return gs
 
-maara = float(input("Syötä gallonamäärä: "))
-while maara>-1:
-    tulos = muunnos(maara)
+bensa = float(input("Syötä gallonamäärä: "))
+while bensa>-1:
+    tulos = muunnos(bensa)
     print(str(tulos) + " litraa")
-    maara = float(input("Syötä gallonamäärä: "))
+    bensa = float(input("Syötä gallonamäärä: "))
