@@ -1,9 +1,9 @@
 import mysql.connector
 
-def testi(koodi):
+def haku(koodi):
     sql = "select name, municipality from airport"
     sql += " where ident='" + koodi + "'"
-    print(sql)
+    #print(sql)
     kursori = yhteys.cursor()
     kursori.execute(sql)
     tulos = kursori.fetchall()
@@ -17,7 +17,8 @@ yhteys = mysql.connector.connect(
     database="flight_game",
     user="root",
     password="Servermaster20!",
-    autocommit=True)
+    autocommit=True
+    )
 
 koodi = input("Syötä lentoaseman ICAO-koodi: ")
-testi(koodi)
+haku(koodi)
