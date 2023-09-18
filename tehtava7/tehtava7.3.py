@@ -1,14 +1,14 @@
-vastaus = input("Haluatko syöttää uuden lentoaseman(s) vai hakea jo syötetyn lentoaseman nimen(h)?"
+vastaus = input("Haluatko syöttää uuden lentoaseman(syöttö) vai hakea jo syötetyn lentoaseman nimen(haku)?"
                 " Paina Enter lopettaaksesi: ")
 lista = {}
 while vastaus != "":
-    if vastaus == "s":
-        koodi = input("Syötä lentoaseman ICAO-koodi: ")
-        nimi = input("Syötä lentoaseman nimi: ")
+    if vastaus == "syöttö":
+        koodi = input("Syötä uusi lentoaseman ICAO-koodi: ")
+        nimi = input("Syötä uusi lentoaseman nimi: ")
         lista[koodi] = nimi
-    elif vastaus == "h":
+    elif vastaus == "haku":
         koodi = input("Syötä ICAO-koodi: ")
         if koodi in lista:
             print(lista[koodi])
-    vastaus = input("Haluatko syöttää uuden lentoaseman(s) vai hakea jo syötetyn lentoaseman nimen(h)?"
+    vastaus = input("Haluatko syöttää uuden lentoaseman(syöttö) vai hakea jo syötetyn lentoaseman nimen(haku)?"
                     " Paina Enter lopettaaksesi: ")
