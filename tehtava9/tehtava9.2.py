@@ -6,10 +6,9 @@ class Auto:
         self.matka = matka
 
     def kiihdytä(self, muutos):
-        raja = self.huippunopeus
         self.nopeus = self.nopeus + muutos
-        if self.nopeus > raja:
-            self.nopeus = raja
+        if self.nopeus > self.huippunopeus:
+            self.nopeus = self.huippunopeus
         elif self.nopeus < 0:
             self.nopeus = 0
         return
