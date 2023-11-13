@@ -15,7 +15,8 @@ def sqlyhteys(psw):
     return yhteys
 
 
-yhteys = sqlyhteys("Servermaster20!")
+# laita salasana tähän
+yhteys = sqlyhteys("salasana")
 kursori = yhteys.cursor()
 
 app = Flask(__name__)
@@ -23,10 +24,10 @@ app = Flask(__name__)
 
 @app.route('/kenttä/<koodi>')
 def kenttä(koodi):
-    sql = "SELECT name FROM airport WHERE ident ='"+koodi+"'"
+    sql = "SELECT name FROM airport WHERE ident ='" + koodi + "'"
     kursori.execute(sql)
     airport = kursori.fetchall()[0][0]
-    sql = "SELECT municipality FROM airport WHERE ident ='"+koodi+"'"
+    sql = "SELECT municipality FROM airport WHERE ident ='" + koodi + "'"
     kursori.execute(sql)
     city = kursori.fetchall()[0][0]
     answer = {
